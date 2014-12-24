@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+# 历史
+HISTFILE=~/.zsh/data/history
+HISTSIZE=5000
+SAVEHIST=10000
+
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY # 历史时间签
+setopt EXTENDEDGLOB
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_NO_FUNCTIONS
+setopt HIST_SAVE_NO_DUPS
+setopt NO_HIST_BEEP # 禁Beep声
+setopt CORRECTALL # 单词整体校正
+
+# 历史目录
+setopt AUTOPUSHD 
+setopt PUSHDMINUS
+setopt PUSHDSILENT
+setopt PUSHDTOHOME
+DIRSTACKSIZE=12 # 最多保存12个历史目录
+
+# 搜索定义，可以从历史寻找
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end

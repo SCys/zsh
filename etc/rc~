@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+. ~/.zsh/etc/completion
+. ~/.zsh/etc/history
+
+# 颜色
+autoload colors;
+[[ "${terminfo[colors]}" -ge 8 ]] && colors
+
+# PS1
+export PROMPT="[%{$fg_no_bold[white]%}%~%{$reset_color%}]
+%{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[blue]%}%l%{$fg_bold[blue]%}: %{$reset_color%}"
+
+. $HOME/.profile

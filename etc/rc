@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# execute system profile.d
+[[ -f /etc/profile ]] && . /etc/profile
+source /etc
+#local PROFILE_FOLDER_SYSTEM=/etc/profile.d
+#if [[ -d $PROFILE_FOLDER_SYSTEM ]]; then
+#  for profile in $PROFILE_FOLDER_SYSTEM/*.sh; do
+#    [[ -f $profile ]] && . $profile || echo $profile
+#  done
+#fi
+#unset PROFILE_FOLDER 
+
+. ~/.zsh/etc/completion
+. ~/.zsh/etc/history
+. ~/.zsh/etc/bindkey
+. ~/.zsh/etc/alias
+
+# 颜色
+autoload colors;
+[[ "${terminfo[colors]}" -ge 8 ]] && colors
+
+# PS1
+export PROMPT="[%{$fg_no_bold[greeny]%}%~%{$reset_color%}]
+%{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[blue]%}%M%{$reset_color%}[%{$fg_no_bold[blue]%}%l%{$reset_color%}]%{$fg_bold[blue]%}: %{$reset_color%}"
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
