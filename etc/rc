@@ -22,7 +22,7 @@ autoload colors;
 
 # PS1
 export PROMPT="[%{$fg_no_bold[greeny]%}%~%{$reset_color%}]
-%{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[blue]%}%M%{$reset_color%}[%{$fg_no_bold[blue]%}%l%{$reset_color%}]%{$fg_bold[blue]%}: %{$reset_color%}"
+%{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[white]%}%M%{$reset_color%}[%{$fg_no_bold[white]%}%l%{$reset_color%}]%{$fg_bold[white]%}: %{$reset_color%}"
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
