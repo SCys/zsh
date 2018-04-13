@@ -11,6 +11,9 @@
 #fi
 #unset PROFILE_FOLDER 
 
+# add more completion
+fpath=(~/.zsh/completions $fpath)
+
 . ~/.zsh/etc/completion
 . ~/.zsh/etc/history
 . ~/.zsh/etc/bindkey

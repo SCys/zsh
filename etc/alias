@@ -1,3 +1,5 @@
 alias ls='ls --color'
 alias ll='ls -lh'
 alias la='ls -lha'
+
+alias analyze_url='curl -o /dev/null -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n" '
