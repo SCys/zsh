@@ -23,7 +23,7 @@ zstyle ':completion:*' original true
 zstyle ':completion:*' prompt 'correct %e errors'
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*:warnings' format '%Bno match: %d%b'
 
 # kill补全
 zstyle ':completion:*:kill:*' menu yes select

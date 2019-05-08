@@ -3,14 +3,6 @@
 # execute system profile.d
 [[ -f /etc/profile ]] && . /etc/profile
 
-#local PROFILE_FOLDER_SYSTEM=/etc/profile.d
-#if [[ -d $PROFILE_FOLDER_SYSTEM ]]; then
-#  for profile in $PROFILE_FOLDER_SYSTEM/*.sh; do
-#    [[ -f $profile ]] && . $profile || echo $profile
-#  done
-#fi
-#unset PROFILE_FOLDER 
-
 # add more completion
 fpath=(~/.zsh/completions $fpath)
 
@@ -28,8 +20,10 @@ export PROMPT="[%{$fg_no_bold[greeny]%}%~%{$reset_color%}]
 %{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[white]%}%M%{$reset_color%}[%{$fg_no_bold[white]%}%l%{$reset_color%}]%{$fg_bold[white]%}: %{$reset_color%}"
 
 # enable when fcitx installed
-if [[ -f "`which fcitx`" ]]; then
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
-    export XMODIFIERS="@im=fcitx"
-fi
+#if [[ -f "`which fcitx`" ]]; then
+#    export XIM_PROGRAM=fcitx
+#    export XIM=fcitx
+#    export GTK_IM_MODULE=fcitx
+#    export QT_IM_MODULE=fcitx
+#    export XMODIFIERS="@im=fcitx"
+#fi
