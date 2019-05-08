@@ -6,6 +6,7 @@
 # add more completion
 fpath=(~/.zsh/completions $fpath)
 
+. ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 . ~/.zsh/etc/completion
 . ~/.zsh/etc/history
 . ~/.zsh/etc/bindkey
