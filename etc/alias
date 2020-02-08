@@ -1,5 +1,6 @@
-alias ls='ls --color'
+#alias ls='ls --color'
 alias ll='ls -lh'
 alias la='ls -lha'
 
 alias ttfb='curl -o /dev/null -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n" '
+alias ipgeo="curl -s https://api.ip.sb/geoip/$1|jq"
