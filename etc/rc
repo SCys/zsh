@@ -12,19 +12,10 @@ fpath=(~/.zsh/completions $fpath)
 . ~/.zsh/etc/bindkey
 . ~/.zsh/etc/alias
 
+. ~/.zsh/libs/git-prompt.zsh/git-prompt.zsh
+# . ~/.zsh/libs/git-prompt.zsh/examples/rprompt.zsh
+. ~/.zsh/libs/git-prompt.zsh/examples/default.zsh
+
 # 颜色
 autoload colors;
 [[ "${terminfo[colors]}" -ge 8 ]] && colors
-
-# PS1
-export PROMPT="[%{$fg_no_bold[greeny]%}%~%{$reset_color%}]
-%{$fg_bold[green]%}%n%(?,@,%{$fg_bold[red]%}!)%{$fg_bold[white]%}%M%{$reset_color%}[%{$fg_no_bold[white]%}%l%{$reset_color%}]%{$fg_bold[white]%}: %{$reset_color%}"
-
-# enable when fcitx installed
-#if [[ -f "`which fcitx`" ]]; then
-#    export XIM_PROGRAM=fcitx
-#    export XIM=fcitx
-#    export GTK_IM_MODULE=fcitx
-#    export QT_IM_MODULE=fcitx
-#    export XMODIFIERS="@im=fcitx"
-#fi
