@@ -1,0 +1,3 @@
+[submodule "libs/git-prompt.zsh"]
+	path = libs/git-prompt.zsh
+	url = https://github.com/woefe/git-prompt.zsh.git
