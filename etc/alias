@@ -1,6 +1,19 @@
 #alias ls='ls --color'
 alias ll='ls -lh'
 alias la='ls -lha'
+alias grep='grep --color'
+
+alias ..='cd ..'
+alias ...='cd ...'
+
+# git commands
+alias gs='git status'
+alias gc='git commit'
+alias gr='git rm --cached'
+alias gb='git branch'
+alias gbr='git branch -r'
+alias gl='git log'
+alias gt='git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
 
 alias ttfb='curl -o /dev/null -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n" '
 alias ipgeo="curl -s https://api.ip.sb/geoip/$1|jq"
