@@ -1,3 +1,6 @@
 [submodule "libs/zplug"]
 	path = libs/zplug
 	url = https://github.com/zplug/zplug
+[submodule "libs/zplugin"]
+	path = libs/zplugin
+	url = https://hub.fastgit.org/JRGGRoberto/zplugin.git
