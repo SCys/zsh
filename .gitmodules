@@ -1,0 +1,3 @@
+[submodule "libs/zinit"]
+	path = libs/zinit
+	url = https://hub.fastgit.org/SCys/zinit.git
