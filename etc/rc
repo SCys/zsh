@@ -3,6 +3,8 @@
 # execute system profile.d
 [[ -f /etc/profile ]] && . /etc/profile
 
+. ~/.zsh/etc/history
+. ~/.zsh/etc/completion
 . ~/.zsh/etc/bindkey
 . ~/.zsh/etc/alias
 
@@ -42,8 +44,8 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     # single version, for OS X, Linux and Windows – so ice-mod `bpick' is used to
     # select Linux package – in this case this is actually not needed, Zinit will
     # grep operating system name and architecture automatically when there's no `bpick'.
-    zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*"
-    zinit load docker/compose
+    # zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*"
+    # zinit load docker/compose
 
     # Vim repository on GitHub – a typical source code that needs compilation – Zinit
     # can manage it for you if you like, run `./configure` and other `make`, etc. stuff.

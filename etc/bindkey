@@ -8,8 +8,8 @@ bindkey "\e[1~" beginning-of-line
 bindkey "\e[2~" quoted-insert
 bindkey "\e[3~" delete-char
 bindkey "\e[4~" end-of-line
-# bindkey "\e[5~" history-beginning-search-backward-end
-# bindkey "\e[6~" history-beginning-search-forward-end
+bindkey "\e[5~" history-beginning-search-backward-end
+bindkey "\e[6~" history-beginning-search-forward-end
 
 bindkey "\e[1;5C" forward-word
 bindkey "\eOc" emacs-forward-word
@@ -45,5 +45,5 @@ bindkey '^i' expand-or-complete-prefix
 #bindkey '^[[A' up-line-or-search
 #bindkey '^[[D' backward-char
 #bindkey '^[[B' down-line-or-search
-#bindkey '^[[C' forward-char 
+#bindkey '^[[C' forward-char
 #bindkey '^[[2~' overwrite-mode
