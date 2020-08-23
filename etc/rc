@@ -69,6 +69,8 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     zinit ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' src"zhook.zsh"
     zinit light direnv/direnv
 
+    zinit light zpm-zsh/ssh
+
     # use powerlevel10k
     zinit ice depth=1; zinit light romkatv/powerlevel10k
 fi
