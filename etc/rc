@@ -31,18 +31,10 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
 
     # Binary release in archive, from GitHub-releases page.
     # After automatic unpacking it provides program "fzf".
-    zinit ice from"gh-r" as"program"
+    zinit ice from "gh-r" as"program"
     zinit load junegunn/fzf-bin
 
     zinit light zdharma/fast-syntax-highlighting
-
-    # One other binary release, it needs renaming from `docker-compose-Linux-x86_64`.
-    # This is done by ice-mod `mv'{from} -> {to}'. There are multiple packages per
-    # single version, for OS X, Linux and Windows – so ice-mod `bpick' is used to
-    # select Linux package – in this case this is actually not needed, Zinit will
-    # grep operating system name and architecture automatically when there's no `bpick'.
-    # zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*"
-    zinit load docker/compose
 
     # Vim repository on GitHub – a typical source code that needs compilation – Zinit
     # can manage it for you if you like, run `./configure` and other `make`, etc. stuff.
