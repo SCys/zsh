@@ -1,4 +1,4 @@
-#alias ls='ls --color'
+alias ls='ls --color'
 alias ll='ls -lh'
 alias la='ls -lha'
 alias grep='grep --color'
