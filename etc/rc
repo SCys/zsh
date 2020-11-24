@@ -42,7 +42,7 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     # package under the path $ZPFX, see: http://zdharma.org/zinit/wiki/Compiling-programs
     #zinit ice as"program" atclone"rm -f src/auto/config.cache; ./configure" \
     #     atpull"%atclone" make pick"src/vim"
-    zinit light vim/vim
+    #zinit light vim/vim
 
     # Scripts that are built at install (there's single default make target, "install",
     # and it constructs scripts by `cat'ing a few files). The make'' ice could also be:
