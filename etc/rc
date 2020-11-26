@@ -3,6 +3,8 @@
 # execute system profile.d
 [[ -f /etc/profile ]] && . /etc/profile
 
+export PATH=$PATH:$HOME/.local/bin
+
 # zinit
 if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     source $HOME/.zsh/libs/zinit/zinit.zsh
