@@ -36,6 +36,7 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     zinit ice from "gh-r" as"program"
     zinit load junegunn/fzf-bin
 
+    zinit ice lucid wait='0' atinit='zpcompinit'
     zinit light zdharma/fast-syntax-highlighting
 
     # Vim repository on GitHub – a typical source code that needs compilation – Zinit
@@ -66,6 +67,19 @@ if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     zinit ice blockf atpull'zinit creinstall -q .'
     zinit light zsh-users/zsh-completions
 fi
+
+export SYSTEMD_EDITOR=nano
+export EDITOR=vim
+
+# 美化 time 的输出
+autoload -Uz colors
+colors
+() {
+    local white_b=$fg_bold[white] blue=$fg[blue] rst=$reset_color
+    TIMEFMT=("$white_b%J$rst"$'\n'
+        "User: $blue%U$rst"$'\t'"System: $blue%S$rst  Total: $blue%*Es$rst"$'\n'
+        "CPU:  $blue%P$rst"$'\t'"Mem:    $blue%M MB$rst")
+}
 
 . ~/.zsh/etc/history
 . ~/.zsh/etc/completion
