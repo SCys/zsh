@@ -5,6 +5,10 @@
 
 export PATH=$PATH:$HOME/.local/bin
 
+if [ -d $HOME/.yarn/bin ]; then
+    export PATH=$PATH:$HOME/.yarn/bin
+fi
+
 # zinit
 if [ -f $HOME/.zsh/libs/zinit/zinit.zsh ]; then
     source $HOME/.zsh/libs/zinit/zinit.zsh
