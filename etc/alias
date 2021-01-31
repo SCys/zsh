@@ -23,4 +23,4 @@ alias ipgeo="curl -s https://api.ip.sb/geoip/$1|jq"
 alias dc="docker-compose"
 alias sys='sudo systemctl'
 alias jf='journalctl --utc --no-hostname --since today -u'
-alias jt='journalctl -xe --no-hostname -n 10 -u'
+alias jt='journalctl --utc --no-hostname --since today -e --no-pager -u'
