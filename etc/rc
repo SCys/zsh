@@ -3,7 +3,7 @@
 # execute system profile.d
 [[ -f /etc/profile ]] && . /etc/profile
 
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
 
 if [ -d $HOME/.yarn/bin ]; then
     export PATH=$PATH:$HOME/.yarn/bin
