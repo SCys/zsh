@@ -24,3 +24,6 @@ alias dc="docker-compose"
 alias sys='sudo systemctl'
 alias jf='journalctl --utc --no-hostname --since today -f -u'
 alias jt='journalctl --utc --no-hostname --since today -e --no-pager -u'
+
+# python3 pip use local wrapper
+alias pip='python3 -m pip'
